@@ -48,3 +48,25 @@ element_colors = {
   }
 
 #Define desired colors for atoms in POSCAR/CONTCAR if desired, else default colours will be used
+
+## external function files
+io_utils
+#Collect file locations (POSCAR, CONTCAR, ACF.dat) for subsequent call
+
+atoms
+#Load atoms
+
+check
+#Ensure consistency between files, especially with number of atoms and atomic positions between POSCAR/CONTCAR and ACF.dat
+
+analysis
+#Collect Bader charges and calculate charge difference between 2 states
+
+plotting
+#Plot Bader charge and save figures
+
+colors
+#Set atomic colors and colormap for Bader charge
+
+layouts
+#Set display configurations of ASE images (with colors)
