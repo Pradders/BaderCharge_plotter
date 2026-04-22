@@ -1,2 +1,50 @@
 # BaderCharge_plotter
-Leverages ASE, numpy and pyplot to calculate the differences in Bader charges acquired from VASP and then colour the different atoms according to the difference in charge (i.e., whether positive or negative).
+Leverages ASE, numpy and pyplot to calculate the differences in Bader charges between two structures acquired from VASP and then colour the different atoms according to the difference in charge (i.e., whether positive or negative).
+
+## Folder structure
+
+reactionORtransition/
+ ├── ini/
+ │    ├── CONTCARorPOSCAR
+ │    └── ACF.dat
+ └── fin/
+      ├── CONTCARorPOSCAR
+      └── ACF.dat
+
+I.e., CONTCAR/POSCAR and ACF.dat are mandatory for the code to work
+
+## Usage
+
+python main.py
+
+## Options for output adjustment, can be configured in main and/or function files
+
+layout = "horizontal" | "vertical" | "split"
+#I.e., How the images should be displayed in the final figure
+
+repeat = (2,2,1)
+#i.e., periodic cell expansion
+
+views = [('0x,0y,0z')]
+#i.e., top view
+
+INITIAL = ("ini","initial","is")
+FINAL = ("fin","final","fs")
+#Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar.
+#This variable will store such possible names. If there are alternate names, then please include them manually
+    
+tol = 0.005
+#Default tolerance, i.e., if the (abs) difference in Bader charge is less than 0.005, it will treated as 0
+  
+cmp = plt.cm.RdBu_r
+#Default colormap also in function, can be changed to any desired, plt already imported
+
+save_dir="Bader_plots"
+#Save folder
+
+element_colors = {
+  "Ni": "lightgray",
+  "C": "black",
+  }
+
+#Define desired colors for atoms in POSCAR/CONTCAR if desired, else default colours will be used
