@@ -70,3 +70,6 @@ colors
 
 layouts
 #Set display configurations of ASE images (with colors)
+
+# Example
+One example is provided (the "C6" folder), which you can use to observe the functionality of this code by running the main.py file.
