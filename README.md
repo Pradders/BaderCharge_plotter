@@ -25,59 +25,39 @@ python main.py
 
 ## Options for output adjustment, can be configured in main and/or function files
 
-layout = "horizontal" | "vertical" | "split"
-#I.e., How the images should be displayed in the final figure
+layout = "horizontal" | "vertical" | "split" #I.e., How the images should be displayed in the final figure
 
-repeat = (2,2,1)
-#i.e., periodic cell expansion
+repeat = (2,2,1) #i.e., periodic cell expansion
 
-views = [('0x,0y,0z')]
-#i.e., top view
+views = [('0x,0y,0z')] #i.e., top view
 
 INITIAL = ("ini","initial","is")
 
-FINAL = ("fin","final","fs")
-
-#Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar.
-#This variable will store such possible names. If there are alternate names, then please include them manually
+FINAL = ("fin","final","fs") #Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar. These variables will store such possible names. If there are alternate names, then please include them manually
     
-tol = 0.005
-#Default tolerance, i.e., if the (abs) difference in Bader charge is less than 0.005, it will treated as 0
+tol = 0.005 #Default tolerance, i.e., if the (abs) difference in Bader charge is less than 0.005, it will treated as 0
   
-cmp = plt.cm.RdBu_r
-#Default colormap also in function, can be changed to any desired, plt already imported
+cmp = plt.cm.RdBu_r #Default colormap also in function, can be changed to any desired, plt already imported
 
-save_dir="Bader_plots"
-#Save folder
+save_dir="Bader_plots" #Save folder
 
-element_colors = {
-  "Ni": "lightgray",
-  "C": "black",
-  }
-
-#Define desired colors for atoms in POSCAR/CONTCAR if desired, else default colours will be used
+element_colors = {"Ni": "lightgray", "C": "black",} #Define desired colors for atoms in POSCAR/CONTCAR if desired, else default colours will be used
 
 ## external function files
 io_utils
 #Collect file locations (POSCAR, CONTCAR, ACF.dat) for subsequent call
 
-atoms
-#Load atoms
+atoms #Load atoms
 
-check
-#Ensure consistency between files, especially with number of atoms and atomic positions between POSCAR/CONTCAR and ACF.dat
+check #Ensure consistency between files, especially with number of atoms and atomic positions between POSCAR/CONTCAR and ACF.dat
 
-analysis
-#Collect Bader charges and calculate charge difference between 2 states
+analysis #Collect Bader charges and calculate charge difference between 2 states
 
-plotting
-#Plot Bader charge and save figures
+plotting #Plot Bader charge and save figures
 
-colors
-#Set atomic colors and colormap for Bader charge
+colors #Set atomic colors and colormap for Bader charge
 
-layouts
-#Set display configurations of ASE images (with colors)
+layouts #Set display configurations of ASE images (with colors)
 
 # Example
 One example is provided (the "C6" folder), which you can use to observe the functionality of this code by running the main.py file. Please note that this is for single hydrogenation of the C6 atom of the furfural molecule. Feel free to delete these examples when running your own code. Please see a figure below:
