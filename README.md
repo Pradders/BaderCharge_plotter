@@ -31,7 +31,7 @@ repeat = (2,2,1) #i.e., periodic cell expansion
 
 views = [('0x,0y,0z')] #i.e., top view
 
-INITIAL = ("ini","initial","is")
+INITIAL = ("ini","initial","is") #Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar. These variables will store such possible names. If there are alternate names, then please include them manually
 
 FINAL = ("fin","final","fs") #Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar. These variables will store such possible names. If there are alternate names, then please include them manually
     
