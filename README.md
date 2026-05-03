@@ -4,11 +4,17 @@ Leverages ASE, numpy and pyplot to calculate the differences in Bader charges be
 ## Folder structure
 
 reactionORtransition/
+
 -> ini/
+
 ->-> CONTCARorPOSCAR
+
 ->-> ACF.dat
+
 -> fin/
+
 ->-> CONTCARorPOSCAR
+
 ->-> ACF.dat
 
 I.e., CONTCAR/POSCAR and ACF.dat are mandatory for the code to work
@@ -29,7 +35,9 @@ views = [('0x,0y,0z')]
 #i.e., top view
 
 INITIAL = ("ini","initial","is")
+
 FINAL = ("fin","final","fs")
+
 #Default is to store key files of each transition in folders entitled "ini" (initial state) and "fin" (final state), or anything similar.
 #This variable will store such possible names. If there are alternate names, then please include them manually
     
