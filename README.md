@@ -4,12 +4,12 @@ Leverages ASE, numpy and pyplot to calculate the differences in Bader charges be
 ## Folder structure
 
 reactionORtransition/
- ├── ini/
- │    ├── CONTCARorPOSCAR
- │    └── ACF.dat
- └── fin/
-      ├── CONTCARorPOSCAR
-      └── ACF.dat
+-> ini/
+->-> CONTCARorPOSCAR
+->-> ACF.dat
+-> fin/
+->-> CONTCARorPOSCAR
+->-> ACF.dat
 
 I.e., CONTCAR/POSCAR and ACF.dat are mandatory for the code to work
 
