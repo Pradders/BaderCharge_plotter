@@ -72,6 +72,6 @@ layouts
 #Set display configurations of ASE images (with colors)
 
 # Example
-One example is provided (the "C6" folder), which you can use to observe the functionality of this code by running the main.py file. Please note that this is for single hydrogenation of the C6 atom of the furfural molecule. Please see a figure below:
+One example is provided (the "C6" folder), which you can use to observe the functionality of this code by running the main.py file. Please note that this is for single hydrogenation of the C6 atom of the furfural molecule. Feel free to delete these examples when running your own code. Please see a figure below:
 
 ![Example figure of bader charge changes of C6 hydrogenation of furfural](Bader_plots/Hydrogenation/Hydrogenation_C6.png)
