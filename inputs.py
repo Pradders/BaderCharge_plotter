@@ -24,14 +24,15 @@ def choose_mode():
     #Choose a figure collection method
     while True:
         print("\nSelect shift mode:")
-        print("1: Same shift per (ini, fin) pair") #Mode 1: same shift for each (ini, fin) image pair
-        print("2: Manual shift for EACH structure") #Mode 2: manual shift for each individual image
-        print("3: Same shift for ALL images") #Mode 3: same shift for each individual image
+        print("1: SAME shift per (ini, fin) pair") #Mode 1: same shift for each (ini, fin) image pair
+        print("2: MANUAL shift for EACH image") #Mode 2: manual shift for each individual image
+        print("3: SAME shift for ALL images") #Mode 3: same shift for all images
+        print("4: NO shift to ANY image") #Mode 4: no applied shift to any individual image
 
         #Which method? Select an integer among 1, 2, and 3.
-        mode = get_int("Enter mode (1/2/3): ")
+        mode = get_int("Enter mode (1/2/3/4): ")
         #Ask if correct, else restart loop
-        if mode in [1, 2, 3]:
+        if mode in [1, 2, 3, 4]:
             confirm_mode = input(f"Confirm mode {mode}? (y/n): ").lower() #Confirmation
             if confirm_mode == "y":
                 _current_mode = mode #Keep selected method constant throughout program
@@ -128,3 +129,7 @@ def process_structures(atoms_ini, atoms_fin):
             test_fin = apply_shift(atoms_fin, shift)
 
         return test_ini, test_fin #Return shifted results
+    
+    elif mode == 4: #Mode 4: no applied shift to any individual image
+
+        return atoms_ini, atoms_fin #Leave input unchanged
